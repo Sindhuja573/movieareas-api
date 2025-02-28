@@ -1,8 +1,13 @@
 import express from "express";
 import movieRoutes from './routes/movies.routes.js';
+import connectDB from "./routes/monlib/db.js";
 
 const app = express();
 const PORT = 6789;
+
+//connect db
+
+connectDB();
 
 // Middleware to parse JSON
 app.use(express.json());
